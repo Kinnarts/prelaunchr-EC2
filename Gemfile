@@ -8,6 +8,7 @@ gem 'devise'
 gem 'pg'
 gem 'rails', '4.2.5.2'
 gem 'unicorn'
+gem 'sidekiq'
 
 
 # Gems used only for assets and not required
@@ -23,7 +24,18 @@ group :development, :test do
   gem 'rspec-rails', '3.4.2'
   gem 'rspec-mocks', '3.4.1'
   gem 'test-unit', '~> 3.0'
-  gem "dotenv-rails"
+  gem 'capistrano', '~> 3.4'
+  # rails specific capistrano funcitons
+  gem 'capistrano-rails'
+  # integrate bundler with capistrano
+  gem 'capistrano-bundler'
+  # if you are using RBENV
+  gem 'capistrano-rbenv'
+  # Use Unicorn as our app server
+  gem 'capistrano-sidekiq', '0.5.3'
+  # gem 'capistrano-rvm'
+  gem 'dotenv-rails'
+  gem 'letter_opener'
 end
 
 # To use ActiveModel has_secure_password
